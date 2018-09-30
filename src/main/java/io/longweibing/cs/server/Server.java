@@ -6,19 +6,19 @@ import java.net.Socket;
 import java.util.Date;
 
 public class Server {
-	private final int port = 8888;  // ·şÎñÆ÷¶Ë¿ÚºÅ
-	private ServerSocket serverSocket;  // ·şÎñÆ÷Ì×½Ó×Ö
-	private String name = "Weebing";
+	private final int port = 8888;  // ç«¯å£å·
+	private ServerSocket serverSocket;  // æœåŠ¡å™¨å¥—æ¥å­—
+	private String name = "Weebing";  // æœåŠ¡å™¨åå­—
 	
 	public Server() throws Exception{
-		serverSocket = new ServerSocket(port);  // ³õÊ¼»¯·şÎñÆ÷Ì×½Ó×Ö¶ÔÏó
+		serverSocket = new ServerSocket(port);  // åˆå§‹åŒ–æœåŠ¡å™¨å¥—æ¥å­—
 	}
 
 	/**
-	 * ·şÎñÆ÷µÄºËĞÄ·şÎñº¯Êı
+	 * æ ¸å¿ƒå‡½æ•°
 	 */
 	public void sevice() {
-		Socket socket = null;  // ¿Í»§»úÌ×½Ó×Ö
+		Socket socket = null;  // å¥—æ¥å­—
 		try {
 			while (true) {
 				socket = this.serverSocket.accept();
@@ -27,7 +27,7 @@ public class Server {
 				String strRead = new String(byBuffer);
 				this.response(strRead);
 				
-				// ¹Ø±Õ×ÊÔ´
+				// å…³é—­è¿æ¥
 				inputStream.close();
 				byBuffer = null;
 			}
@@ -36,14 +36,14 @@ public class Server {
 		}
 	}
 	
-	// ¶Ô¿Í»§¶ËµÄÇëÇóÎÄ±¾×ö½âÎö²¢ÏìÓ¦
+	// å¯¹æ–‡æœ¬çš„å¤„ç†
 	private void response(String pleaseText) {
-		if (pleaseText.equals("ÏÖÔÚ¼¸µãÁË")) {
-			System.out.print("ÏÖÔÚÊ±¼äÎª: ");
+		if (pleaseText.equals("ç°åœ¨å‡ ç‚¹äº†")) {
+			System.out.print("ç°åœ¨æ—¶é—´: ");
 			System.err.println(new Date());
 			return;
 		}
-		if (pleaseText.equals("Äã½ĞÊ²Ã´Ãû×Ö")) {
+		if (pleaseText.equals("ä½ å«ä»€ä¹ˆåå­—")) {
 			System.err.print(this.name + "---");
 			System.out.println(new Date());
 			return;
@@ -51,7 +51,7 @@ public class Server {
 	}
 	
 //	public static void main(String[] args) throws Exception {
-//	System.out.println("·şÎñÆ÷ÒÑÆô¶¯: ");
+//	System.out.println("æœåŠ¡å™¨å¯åŠ¨: ");
 //	Server server = new Server();
 //	server.sevice();
 //			

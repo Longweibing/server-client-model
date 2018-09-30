@@ -7,7 +7,7 @@ import io.longweibing.cs.client.Client;
 public class ClientMain {
 
 	public static void main(String[] args) throws Exception {
-		System.out.println("¿Í»§¶ËÒÑÆô¶¯: ---" + new Date());
+		System.out.println("å®¢æˆ·ç«¯å¯åŠ¨: ---" + new Date());
 		Client client = new Client();
 		client.run();
 	}

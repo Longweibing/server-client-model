@@ -7,7 +7,7 @@ import io.longweibing.cs.server.Server;
 public class ServerMain {
 
 	public static void main(String[] args) throws Exception {
-		System.out.println("·şÎñÆ÷ÒÑÆô¶¯: ---" + new Date());
+		System.out.println("æœåŠ¡å™¨å¯åŠ¨: ---" + new Date());
 		Server server = new Server();
 		server.sevice();
 	}

@@ -5,9 +5,9 @@ import java.net.Socket;
 import java.util.Scanner;
 
 public class Client {
-	private Socket socket = null;  // Ì×½Ó×Ö
-	private int port = 8888;  // ¿Í»§¶Ë¶Ë¿ÚºÅ
-	private String ipadd = "localhost";  // ¿Í»§¶ËipµØÖ·
+	private Socket socket = null;  // å¥—æ¥å­—
+	private int port = 8888;  // ç«¯å£å·
+	private String ipadd = "localhost";  // ipåœ°å€Ö·
 	
 	public Socket getSocket() {
 		return socket;
