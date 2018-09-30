@@ -24,7 +24,7 @@ public class Client {
 			this.socket = new Socket(ipadd, port);
 			OutputStream outputStream = this.socket.getOutputStream();
 			byte[] bytes = null;
-			bytes = textLine.getBytes("gbk");
+			bytes = textLine.getBytes("utf-8");
 			outputStream.write(bytes);
 			outputStream.flush();
 			
