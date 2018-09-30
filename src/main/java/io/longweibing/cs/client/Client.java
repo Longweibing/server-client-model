@@ -18,7 +18,6 @@ public class Client {
 	}
 		
 	public void run() throws Exception {
-		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
 		String textLine = null;
 		while ((textLine = scanner.nextLine()) != null) {
